@@ -1,0 +1,38 @@
+{
+  "info": {
+    "name": "TB API Test",
+    "_postman_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "description": "Test POST /predict endpoint for TB detection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "POST /predict",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fitur\": [0, 2, 2, 1, 2, 0, 1, 1, 1, 2, 2, 1, 1, 1, 0, 0]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/predict",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "predict"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
