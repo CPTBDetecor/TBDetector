@@ -91,7 +91,7 @@ const calculateResult = async () => {
   setLoading(true);
   const fitur = questions.map(q => mapAnswerToNumber(q.id, answers[q.id]));
   try {
-    const res = await axios.post('https://tbdetector-production.up.railway.app/detection', { fitur });
+    const res = await axios.post('https://tbdetector-production.up.railway.app/predict', { fitur });
     const prediction = res.data.hasil_prediksi;
     const probability = res.data.nilai_probabilitas;
 
