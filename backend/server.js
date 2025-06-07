@@ -5,8 +5,8 @@ const { spawn } = require('child_process');
 
 const init = async () => {
   const server = Hapi.server({
-    port: process.env.PORT || 3000,
-    host: '0.0.0.0', // Ubah dari 'localhost' ke '0.0.0.0'
+    port: process.env.PORT || 8080,
+    host: '0.0.0.0',
     routes: {
       cors: {
         origin: ['*'] // Izinkan semua origin, atau ganti dengan ['http://localhost:5173']
