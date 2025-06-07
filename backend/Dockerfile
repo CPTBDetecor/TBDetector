@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 # Install system dependencies & Node.js
 RUN apt-get update && \
@@ -19,18 +19,13 @@ RUN apt-get update && \
 
 WORKDIR /app
 
-# Copy all files
 COPY . .
 
-# Install Python dependencies
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Install Node.js dependencies
 RUN npm install
 
-# Expose port
 ENV PORT=8080
 EXPOSE 8080
 
-# Start server
 CMD ["node", "server.js"]
