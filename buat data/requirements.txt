@@ -1,8 +1,0 @@
-numpy
-scikit-learn
-joblib
-flask
-jinja2
-mysql-connector-python
-pandas
-openpyxl
